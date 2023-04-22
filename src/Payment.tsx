@@ -5,13 +5,53 @@ const Payment = () => {
   return (
     <View style={styles.container}>
       <View style={styles.title}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: 'rgba(7, 18, 42, 0.15)',
+            width: 42,
+            height: 42,
+            borderRadius: 8,
+            top: 30,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
           <Image source={require('./Vector1.png')} />
         </TouchableOpacity>
         <Text style={styles.text}>Credit / Debit Card</Text>
       </View>
       <View style={styles.title6}>
-        <Image source={require('./cardd.png')} />
+        <TouchableOpacity style={styles.button}>
+          <Image source={require('./card.png')} />
+          <Image
+            style={{top: -190, left: 100}}
+            source={require('./symbol.png')}
+          />
+        </TouchableOpacity>
+        <Text style={{color: '#FFFFFF', fontWeight: '400', fontSize: 26}}>
+          4242 4242 4242 4242
+        </Text>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontWeight: '400',
+            fontSize: 20,
+            top: 70,
+            right: 60,
+          }}>
+          LESLEE HARRON
+        </Text>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontWeight: '400',
+            fontSize: 20,
+            top: 60,
+            left: 100,
+          }}>
+          04/22
+        </Text>
+      </View>
+      <View style={{alignItems: 'center'}}>
         <Image source={require('./photo.png')} />
       </View>
       <View style={styles.title2}>
@@ -56,25 +96,26 @@ const styles = StyleSheet.create({
     backgroundColor: ' #E5E5E5',
   },
   title: {
-    flex: 0.25,
+    flex: 0.3,
     alignItems: 'flex-end',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     right: 18,
+    top: -60,
   },
   button: {
-    backgroundColor: 'rgba(7, 18, 42, 0.15)',
     width: 42,
     height: 42,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    top: 10,
+    top: 60,
   },
   text: {
     color: '#07122A',
     fontWeight: '600',
     fontSize: 22,
+    top:20
   },
   buttonn: {
     backgroundColor: '#07122A',
@@ -160,6 +201,9 @@ const styles = StyleSheet.create({
   title6: {
     alignItems: 'center',
     gap: -20,
+    flex: 0.7,
+    justifyContent: 'center',
+    top: -40,
   },
   text7: {
     top: 10,
